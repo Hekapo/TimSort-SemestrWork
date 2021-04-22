@@ -21,11 +21,6 @@ public class Generator {
         int[] a = new int[size];
         for (int i = 0; i < size; i++) {
             a[i] = 100 + (new Random().nextInt(9900));
-//            for (int j = 0; j < i; j++) {
-//                if (a[i] == a[j]) {
-//                    a[j] = (int) (Math.random() * 10);
-//                }
-//            }
         }
         return a;
     }
@@ -88,8 +83,6 @@ public class Generator {
 
             list.add(String.valueOf(i));
             list.add(String.valueOf(100 + countLength));
-            //int[] temp = new int[n];
-            //System.arraycopy(arrData, 0, temp, 0, n - 1);
 
             TimSort.iterations = 0;
             long start = System.nanoTime();
@@ -120,12 +113,6 @@ public class Generator {
 
     }
 
-
-    public void writeLinesSize(String[] array, CSVWriter writer) {
-        for (final String oneElement : array) {
-            writer.writeNext(new String[]{oneElement}, false);
-        }
-    }
 
 }
 
